@@ -1,0 +1,1 @@
+Templates is where specific layouts that belong across all sorts pages and layouts

@@ -1,0 +1,3 @@
+node_modules/
+# Uncomment the following line to stop from pushing sensitive data
+# settings.json
