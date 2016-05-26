@@ -1,6 +1,9 @@
 <template name="eventPage">
+   <ul id="additionalSettings" class='dropdown-content'>
+    <li><a id="stopEventBtn" href="#!">Stop Event</a></li>
+  </ul>
   <div class="banner center">
-    <h3>{{eventData.title}}<a href=""><i class="material-icons">more_vert</i></a></h3>
+    <h3>{{eventData.title}}<a href="" class="dropdown-button" data-activates="additionalSettings"><i class="small material-icons">more_vert</i></a></h3>
     {{#if eventData.status}}
       <p><i>LIVE</i></p>
     {{else}}

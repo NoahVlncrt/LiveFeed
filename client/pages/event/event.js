@@ -52,5 +52,9 @@ Template.eventPage.events({
   'click .favorite': function(){
     postId = this._id
     Posts.update({_id: postId},{$addToSet:{favorited: Meteor.userId()}})
+  },
+  'click #stopEventBtn': function(){
+    currentEvent = FlowRouter.getParam("id")
+    Events.update({_id: currentEvent},{ $set: {status: false}})
   }
 })
