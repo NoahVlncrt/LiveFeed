@@ -1,5 +1,15 @@
 <template name="mainLayout">
-  <nav>  
+  <nav>
+    <div class="nav-wrapper">
+      <ul id="slide-out" class="side-nav">
+        {{#if currentUser}}
+          <li><a href="#" class="logout">Logout</a></li>
+        {{else}}
+          <li><a href="/signup">Login/Signup</a></li>
+        {{/if}}
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a> 
+    </div>
   </nav>
   {{>Template.dynamic template=content}}
 </template>

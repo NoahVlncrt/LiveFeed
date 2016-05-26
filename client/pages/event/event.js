@@ -31,7 +31,7 @@ Template.eventPage.helpers({
     Data = Events.findOne({_id: currentEvent});
     createdBy = Data.createdBy
     return createdBy === Meteor.userId()
-  }
+  },
 })
 Template.eventPage.events({
   'submit .newUpdate': function(){
@@ -56,5 +56,8 @@ Template.eventPage.events({
   'click #stopEventBtn': function(){
     currentEvent = FlowRouter.getParam("id")
     Events.update({_id: currentEvent},{ $set: {status: false}})
+  },
+  'click #deleteEventBtn': function(){
+    Bert.alert( 'Oh not just yet... Next update!', 'danger', 'fixed-top', 'fa-frown-o' );
   }
 })
